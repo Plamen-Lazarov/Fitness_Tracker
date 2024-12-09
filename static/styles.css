@@ -167,3 +167,50 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #070e16;
+    color: white;
+    height: 100vh; /* Makes the section full screen */
+    box-sizing: border-box;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%; /* Limits text section width */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-content .custom-btn {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
