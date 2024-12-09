@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFitnessBro</title>
+    <link rel="stylesheet" href={% static 'styles.css' %}>
+    
+</head>
+    <header class="logo">
+        <h1>MyFitnessBro</h1>
+    </header>
+<body>
+{% include 'common/nav.html' %}
+
+{% block content %}
+{% endblock %}
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>MyGymBro</h4>
+            <p>Your personal fitness and calorie tracking app.</p>
+            <ul class="social-media">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'home' %}">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>
+                MyGymBro@gmail.com<br>
+                +359 089 999999<br>
+                Sofia, Bulgaria
+            </p>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2024 MyGymBro. All rights reserved.
+    </div>
+</footer>
+
+</html>
+

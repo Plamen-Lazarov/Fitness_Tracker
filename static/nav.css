@@ -1,0 +1,59 @@
+/* Top Navigation Bar */
+.top-nav {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 100;
+    background-color: #12163a;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: #1c204a;
+    color: #34c1eb;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        top: 10px;
+        right: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+}
