@@ -1,15 +1,21 @@
 <nav class="top-nav">
     <ul class="nav-menu">
         <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">About Us</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
-        {% if not request.user.is_authenticated %}
-        <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Log In</a></li>
-        {% else %}
-        <li class="nav-item">
-            <a href="{% url 'logout' %}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()" class="nav-link">Log Out</a>
-        </li>
+        {% if request.user.is_authenticated %}
+            <li class="nav-item"><a href="{% url 'dashboard' %}" class="nav-link">Dashboard</a></li>
         {% endif %}
-        <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
+        {% if not request.user.is_authenticated %}
+            <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Log In</a></li>
+        {% else %}
+            <li class="nav-item">
+                <a href="{% url 'logout' %}"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit()" class="nav-link">Log
+                    Out</a>
+            </li>
+        {% endif %}
+        {% if request.user.is_authenticated %}
+            <li class="nav-item"><a href="{% url 'profile-details' %}" class="nav-link">Profile</a></li>
+        {% endif %}
     </ul>
 </nav>
 

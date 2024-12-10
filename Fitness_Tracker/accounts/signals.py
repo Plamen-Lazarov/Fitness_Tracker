@@ -6,6 +6,7 @@ from Fitness_Tracker.accounts.models import Profile
 
 UserModel = get_user_model()
 
+
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_profile(sender, instance: UserModel, created: bool, **kwargs):
     if created:
@@ -15,5 +16,6 @@ def create_profile(sender, instance: UserModel, created: bool, **kwargs):
             last_name='user',
             age=0,
             weight=0,
+            calories_goal=0,
             bio='no bio',
         )

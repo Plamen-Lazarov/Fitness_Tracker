@@ -22,3 +22,39 @@ class Food(models.Model):
     proteins = models.PositiveIntegerField()
     fats = models.PositiveIntegerField()
 
+    profile = models.ForeignKey(
+        to='accounts.Profile',
+        on_delete=models.CASCADE,
+        related_name='foods',
+    )
+
+class Steps(models.Model):
+    steps = models.PositiveIntegerField()
+
+    profile = models.ForeignKey(
+        to='accounts.Profile',
+        on_delete=models.CASCADE,
+        related_name='steps_count',
+    )
+
+
+class Water(models.Model):
+    water = models.PositiveIntegerField()
+
+    profile = models.ForeignKey(
+        to='accounts.Profile',
+        on_delete=models.CASCADE,
+        related_name='water_count',
+    )
+
+
+class Sleep(models.Model):
+    hours = models.PositiveIntegerField()
+    minutes = models.PositiveIntegerField()
+
+    profile = models.ForeignKey(
+        to='accounts.Profile',
+        on_delete=models.CASCADE,
+        related_name='sleep_count',
+    )
+

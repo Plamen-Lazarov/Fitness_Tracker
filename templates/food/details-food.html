@@ -1,0 +1,19 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+    <main>
+        <section id="register">
+            <div class="form">
+                <h2>Food</h2>
+
+                <form class="register-form" action="{% url 'edit-food' food.id %}">
+                    {{ form }}
+                    <button type="submit">Edit</button>
+                </form>
+                <form class="register-form" action="{% url 'delete-food' food.id %}">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock %}

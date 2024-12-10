@@ -58,4 +58,6 @@ class Profile(models.Model):
 
     weight = models.PositiveIntegerField()
 
+    calories_goal = models.PositiveIntegerField()
+
     bio = models.TextField()
