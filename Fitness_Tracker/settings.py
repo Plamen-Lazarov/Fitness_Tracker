@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Fitness_Tracker.accounts.apps.AccountsConfig'
+    'Fitness_Tracker.accounts.apps.AccountsConfig',
+    'Fitness_Tracker.calorie_tracker.apps.CalorieTrackerConfig'
 ]
 
 MIDDLEWARE = [

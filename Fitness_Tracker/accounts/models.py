@@ -54,8 +54,8 @@ class Profile(models.Model):
         max_length=20,
     )
 
-    age = models.IntegerField()
+    age = models.PositiveIntegerField()
 
-    weight = models.IntegerField()
+    weight = models.PositiveIntegerField()
 
     bio = models.TextField()
