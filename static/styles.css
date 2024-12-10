@@ -1,5 +1,6 @@
 @import "nav.css";
 
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,124 +12,9 @@ body {
     flex-direction: column;
 }
 
-.logo {
-    margin-top: 3rem;
-    margin-left: 3rem;
-}
-
-.home-about-us {
-    text-align: center;
-    margin-top: 3rem;
-}
-
 p {
     margin: 3rem;
     font-size: 1.2rem;
-}
-
-.team-members {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20px;
-}
-
-.team-member {
-    text-align: center;
-    background-color: #070e16;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    margin: 10px;
-}
-
-.team-member img {
-    width: 150px;
-    border-radius: 50%;
-}
-
-footer {
-    background-color: #070e16;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.footer-section {
-    text-align: left;
-}
-
-.social-media li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-media a {
-    color: #070e16;
-    font-size: 20px;
-}
-
-.custom-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.custom-btn:hover {
-    background-color: #0056b3;
-}
-
-.primary-btn {
-    background-color: #007bff;
-}
-
-.ml-2 {
-    margin-left: 0.5rem;
-}
-
-.form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.register-form {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    background-color: #0f1c31;
-    border: 1px solid black;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-group {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
 }
 
 label {
@@ -168,6 +54,139 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* Logo */
+.logo {
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
+/* Home Page */
+.home-about-us {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Team Members */
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.team-member {
+    text-align: center;
+    background-color: #070e16;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    margin: 10px;
+}
+
+.team-member img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Footer */
+footer {
+    background-color: #070e16;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media a {
+    color: #070e16;
+    font-size: 20px;
+}
+
+/* Buttons */
+.custom-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3;
+}
+
+.primary-btn {
+    background-color: #007bff;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #0f1c31;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+/* Hero Section */
 .hero-section {
     display: flex;
     align-items: center;
@@ -213,4 +232,132 @@ button[type="submit"]:hover {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+/* Dashboard */
+.dashboard {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.calories {
+    display: flex;
+    gap: 5px;
+    font-size: 1.2rem;
+}
+
+.goal, .food, .exercise, .remaining {
+    font-weight: bold;
+    color: #42A5F5;
+}
+
+.edit-button button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #42A5F5;
+    color: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button button:hover {
+    background-color: #2196F3;
+}
+
+.meal {
+    margin-bottom: 20px;
+}
+
+.meal h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #BB86FC;
+}
+
+.food-item {
+    font-size: 1rem;
+}
+
+.calories {
+    font-size: 1rem;
+    color: #90CAF9;
+}
+
+.add-food-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #03DAC5;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.add-food-button:hover {
+    background-color: #018786;
+    color: #FFFFFF;
+}
+
+/* Profile */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #0f1c31;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.profile-age {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.profile-bio {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }

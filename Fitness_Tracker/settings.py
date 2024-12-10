@@ -122,9 +122,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = True
 
 STATIC_URL = 'static/'
 
