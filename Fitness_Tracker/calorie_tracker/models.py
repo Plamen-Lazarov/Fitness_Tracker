@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 
 from Fitness_Tracker.calorie_tracker.choices import MealChoice
@@ -49,8 +50,12 @@ class Water(models.Model):
 
 
 class Sleep(models.Model):
-    hours = models.PositiveIntegerField()
-    minutes = models.PositiveIntegerField()
+    hours = models.PositiveIntegerField(
+        validators=[MinValueValidator(0), MaxValueValidator(23)]
+    )
+    minutes = models.PositiveIntegerField(
+        validators=[MinValueValidator(0), MaxValueValidator(59)]
+    )
 
     profile = models.ForeignKey(
         to='accounts.Profile',

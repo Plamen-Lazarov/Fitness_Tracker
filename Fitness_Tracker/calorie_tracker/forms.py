@@ -1,6 +1,6 @@
 from django import forms
 
-from Fitness_Tracker.calorie_tracker.models import Food
+from Fitness_Tracker.calorie_tracker.models import Food, Water, Steps, Sleep
 
 
 class FoodBaseForm(forms.ModelForm):
@@ -8,6 +8,20 @@ class FoodBaseForm(forms.ModelForm):
         model = Food
         fields = '__all__'
 
+class WaterBaseForm(forms.ModelForm):
+    class Meta:
+        model = Water
+        exclude = ['profile']
+
+class StepsBaseForm(forms.ModelForm):
+    class Meta:
+        model = Steps
+        exclude = ['profile']
+
+class SleepBaseForm(forms.ModelForm):
+    class Meta:
+        model = Sleep
+        exclude = ['profile']
 
 class FoodCreateForm(FoodBaseForm):
     class Meta:
@@ -65,3 +79,21 @@ class FoodDeleteForm(FoodBaseForm):
         super(FoodDeleteForm, self).__init__(*args, **kwargs)
         for field in self.fields.values():
             field.widget.attrs['readonly'] = True
+
+
+class WaterEditForm(WaterBaseForm):
+    class Meta:
+        model = Water
+        exclude = ['profile']
+
+
+class StepsEditForm(StepsBaseForm):
+    class Meta:
+        model = Steps
+        exclude = ['profile']
+
+
+class SleepEditForm(SleepBaseForm):
+    class Meta:
+        model = Sleep
+        exclude = ['profile']

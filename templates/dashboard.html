@@ -10,28 +10,28 @@
                     <span>-</span>
                     <span class="food">{{ total_food_calories }}</span>
                     <span>=</span>
-                    <span class="remaining">1,349</span>
+                    <span class="remaining">{{ remaining_calories}}</span>
                 </div>
                 <div class="header-info">
-                    <span class="goal">2.5L Water </span>
+                    <span class="goal">{{ water.water }} ml Water </span>
                 </div>
                 <div class="header-info">
-                    <span class="goal">5599 Steps</span>
+                    <span class="goal">{{ steps.steps }} Steps</span>
                 </div>
                 <div class="header-info">
-                    <span class="goal">7 Hours of sleep</span>
+                    <span class="goal">{{ sleep.hours }}:{{ sleep.minutes }} Hours of sleep</span>
                 </div>
             </div>
             <a href="{% url 'profile-edit' %}" style="text-decoration: none; color: inherit;">
                 <p>Edit Calories</p>
             </a>
-            <a href="{% url 'home' %}" style="text-decoration: none; color: inherit;">
+            <a href="{% url 'edit-water' water.id %}" style="text-decoration: none; color: inherit;">
                 <p>Edit Water</p>
             </a>
-            <a href="{% url 'home' %}" style="text-decoration: none; color: inherit;">
+            <a href="{% url 'edit-steps' steps.id %}" style="text-decoration: none; color: inherit;">
                 <p>Edit Steps</p>
             </a>
-            <a href="{% url 'home' %}" style="text-decoration: none; color: inherit;">
+            <a href="{% url 'edit-sleep' sleep.id %}" style="text-decoration: none; color: inherit;">
                 <p>Edit Sleep</p>
             </a>
         </header>

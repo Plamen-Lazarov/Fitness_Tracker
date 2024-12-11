@@ -27,3 +27,6 @@ class ProfileEditForm(ProfileBaseForm):
     class Meta:
         model = Profile
         fields = ['first_name', 'last_name', 'weight', 'age', 'calories_goal', 'bio', ]
+
+
+

@@ -1,6 +1,6 @@
 <nav class="top-nav">
     <ul class="nav-menu">
-        <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="{% url 'about-us' %}" class="nav-link">About Us</a></li>
         {% if request.user.is_authenticated %}
             <li class="nav-item"><a href="{% url 'dashboard' %}" class="nav-link">Dashboard</a></li>
         {% endif %}

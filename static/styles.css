@@ -265,6 +265,7 @@ footer {
 .goal, .food, .remaining {
     font-weight: bold;
     color: #42A5F5;
+    text-decoration: none;
 }
 
 .edit-button button {
