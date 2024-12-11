@@ -3,6 +3,10 @@ from django.urls import path
 from Fitness_Tracker.calorie_tracker.views import FoodCreateView, FoodEditView, FoodDetailsView, FoodDeleteView, \
     WaterEditView, StepsEditView, SleepEditView
 
+from django.conf.urls import handler404
+
+handler404 = 'Fitness_Tracker.calorie_tracker.views.custom_404_view'
+
 urlpatterns = [
     path('create/', FoodCreateView.as_view(), name='create-food'),
     path('<int:food_id>/edit/', FoodEditView.as_view(), name='edit-food'),

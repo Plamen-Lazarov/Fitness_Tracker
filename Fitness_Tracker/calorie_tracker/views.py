@@ -77,7 +77,8 @@ class SleepEditView(LoginRequiredMixin, UpdateView):
     template_name = 'sleep/edit-sleep.html'
     success_url = reverse_lazy('dashboard')
 
-
+def custom_404_view(request, exception):
+    return render(request, '404.html', status=404)
 
 
 
