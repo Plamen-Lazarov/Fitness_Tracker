@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, TemplateView, UpdateView, DetailView
@@ -22,7 +24,7 @@ class HomeView(TemplateView):
             return ['common/home_logged_in.html']
         return ['common/home.html']
 
-
+@login_required
 def dashboard(request):
     user_profile = request.user.profile
     foods = Food.objects.filter(profile=user_profile)
@@ -35,7 +37,7 @@ def dashboard(request):
     return render(request, 'dashboard.html', context)
 
 
-class ProfileEditView(UpdateView):
+class ProfileEditView(LoginRequiredMixin,UpdateView):
     model = Profile
     form_class = ProfileEditForm
     template_name = 'profile/edit-profile.html'
@@ -45,7 +47,7 @@ class ProfileEditView(UpdateView):
         return self.request.user.profile
 
 
-class ProfileDetailsView(DetailView):
+class ProfileDetailsView(LoginRequiredMixin,DetailView):
     template_name = 'profile/details-profile.html'
 
     def get_object(self, queryset=None):

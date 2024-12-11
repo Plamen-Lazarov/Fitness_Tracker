@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView, DetailView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 from Fitness_Tracker.calorie_tracker.forms import FoodCreateForm, FoodEditForm, FoodDetailsForm, FoodDeleteForm
 from Fitness_Tracker.calorie_tracker.models import Food
 
 
-class FoodCreateView(CreateView):
+class FoodCreateView(LoginRequiredMixin,CreateView):
     model = Food
     form_class = FoodCreateForm
     template_name = 'food/create-food.html'
@@ -17,7 +19,7 @@ class FoodCreateView(CreateView):
         return super().form_valid(form)
 
 
-class FoodEditView(UpdateView):
+class FoodEditView(LoginRequiredMixin, UpdateView):
     model = Food
     form_class = FoodEditForm
     pk_url_kwarg = 'food_id'
@@ -25,7 +27,7 @@ class FoodEditView(UpdateView):
     success_url = reverse_lazy('dashboard')
 
 
-class FoodDetailsView(DetailView):
+class FoodDetailsView(LoginRequiredMixin, DetailView):
     model = Food
     form_class = FoodDetailsForm
     pk_url_kwarg = 'food_id'
@@ -38,7 +40,7 @@ class FoodDetailsView(DetailView):
         return context
 
 
-class FoodDeleteView(DeleteView):
+class FoodDeleteView(LoginRequiredMixin, DeleteView):
     model = Food
     form_class = FoodDeleteForm
     pk_url_kwarg = 'food_id'
